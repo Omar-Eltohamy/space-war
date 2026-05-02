@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://qii83i172r1x"]
+
+[ext_resource type="Script" uid="uid://c43g71qyamuq0" path="res://script/game_over.gd" id="1_racf3"]
+[ext_resource type="FontFile" uid="uid://m3u32wwytwg4" path="res://font/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/connection/Connection.otf" id="1_tbwuq"]
+[ext_resource type="FontFile" uid="uid://cgmpg2gyox1bt" path="res://font/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/connection_ii/ConnectionII.otf" id="2_racf3"]
+[ext_resource type="AudioStream" uid="uid://bflxerqob0iic" path="res://sound/lose_sound.mp3" id="5_7m3ot"]
+
+[node name="gameOver" type="Control" unique_id=167990718]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_racf3")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1782693499]
+layout_mode = 0
+offset_right = 1936.0
+offset_bottom = 1214.0
+color = Color(0.22745098, 0.18039216, 0.24705882, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=303284964]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=516811217]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -20.0
+offset_right = 46.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = -67
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer" unique_id=1587192686]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_tbwuq")
+theme_override_font_sizes/font_size = 116
+text = "GAME OVER"
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer" unique_id=1704752646]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -11.5
+offset_right = 50.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = -92
+theme_override_constants/margin_top = 98
+
+[node name="Label2" type="Label" parent="CanvasLayer/MarginContainer2" unique_id=331254492]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_racf3")
+theme_override_font_sizes/font_size = 47
+text = "YOUR SCORE: "
+
+[node name="MarginContainer3" type="MarginContainer" parent="CanvasLayer" unique_id=1429094528]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -116.0
+offset_top = -40.0
+offset_right = 116.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 142
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer3" unique_id=39449404]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_racf3")
+theme_override_font_sizes/font_size = 86
+text = "PRESS R TO START AGAIN"
+
+[node name="MarginContainer4" type="MarginContainer" parent="CanvasLayer" unique_id=1009816271]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 24
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer4" unique_id=871390215]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_tbwuq")
+theme_override_font_sizes/font_size = 86
+text = "PRESS ESC TO ESC"
+
+[node name="lose_sound" type="AudioStreamPlayer" parent="." unique_id=2039318172]
+stream = ExtResource("5_7m3ot")
+autoplay = true
+parameters/looping = true

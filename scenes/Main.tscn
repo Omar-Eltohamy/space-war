@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://3fy7cls0sdkc"]
+
+[ext_resource type="Script" uid="uid://c77u477fyofbw" path="res://script/main.gd" id="1_0bbpv"]
+[ext_resource type="FontFile" uid="uid://m3u32wwytwg4" path="res://font/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/connection/Connection.otf" id="2_rarhs"]
+[ext_resource type="FontFile" uid="uid://cgmpg2gyox1bt" path="res://font/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/connection_ii/ConnectionII.otf" id="3_vcsgt"]
+[ext_resource type="AudioStream" uid="uid://ca20td67vmw2d" path="res://sound/title_sound.mp3" id="4_rarhs"]
+[ext_resource type="FontFile" uid="uid://bhslysrl567vc" path="res://font/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/connection/ConnectionBold.otf" id="4_vcsgt"]
+
+[node name="Control" type="Control" unique_id=614466487]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0bbpv")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1873060866]
+layout_mode = 0
+offset_right = 1937.0
+offset_bottom = 1214.0
+color = Color(0, 0, 0.26666668, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1100135889]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1264063550]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.0
+offset_top = -20.0
+offset_right = 108.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = -340
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer" unique_id=79258941]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_rarhs")
+theme_override_font_sizes/font_size = 127
+text = "SPAAAAACE    WAAAAAAARS"
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer" unique_id=1170128209]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = -313
+theme_override_constants/margin_top = -122
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer2" unique_id=1619888800]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_vcsgt")
+theme_override_font_sizes/font_size = 50
+text = "1 player"
+
+[node name="Single" type="Button" parent="CanvasLayer/MarginContainer2/Label" unique_id=2144570067]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -5.0
+offset_right = 208.0
+offset_bottom = 59.0
+
+[node name="MarginContainer3" type="MarginContainer" parent="CanvasLayer" unique_id=1957371127]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 393
+theme_override_constants/margin_top = -122
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer3" unique_id=857860841]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_vcsgt")
+theme_override_font_sizes/font_size = 50
+text = "2 players"
+
+[node name="double" type="Button" parent="CanvasLayer/MarginContainer3/Label" unique_id=1464482754]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -5.0
+offset_right = 241.5
+offset_bottom = 59.0
+
+[node name="MarginContainer4" type="MarginContainer" parent="CanvasLayer" unique_id=497082593]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_left = -335
+theme_override_constants/margin_top = -116
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer4" unique_id=488784265]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_vcsgt")
+theme_override_font_sizes/font_size = 73
+text = "controls"
+
+[node name="Button" type="Button" parent="CanvasLayer/MarginContainer4/Label" unique_id=1858384763]
+layout_mode = 0
+offset_right = 324.0
+offset_bottom = 76.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=488462789]
+stream = ExtResource("4_rarhs")
+autoplay = true
+
+[connection signal="pressed" from="CanvasLayer/MarginContainer2/Label/Single" to="." method="_on_single_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer3/Label/double" to="." method="_on_double_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer4/Label/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,203 @@
+[gd_scene format=3 uid="uid://cagupi6a3051d"]
+
+[ext_resource type="Script" uid="uid://bmnsfdvwtiwmh" path="res://script/level.gd" id="1_mx8sn"]
+[ext_resource type="Texture2D" uid="uid://bd7mm3kl8wqa5" path="res://images/space.png" id="1_w8frs"]
+[ext_resource type="PackedScene" uid="uid://jkh61t5ckm03" path="res://scenes/ship_1.tscn" id="2_mx8sn"]
+[ext_resource type="Texture2D" uid="uid://ja166fqmtdv4" path="res://images/S001_nyknck.png" id="3_2r41h"]
+[ext_resource type="PackedScene" uid="uid://djgd3ws0mms7f" path="res://scenes/meteor_1.tscn" id="3_ppgk2"]
+[ext_resource type="PackedScene" uid="uid://rdj6bl4ixsib" path="res://scenes/ui.tscn" id="6_2r41h"]
+[ext_resource type="AudioStream" uid="uid://c4hs0th0bktim" path="res://sound/game_sound.mp3" id="7_klq6b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppgk2"]
+atlas = ExtResource("3_2r41h")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2r41h"]
+atlas = ExtResource("3_2r41h")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klq6b"]
+atlas = ExtResource("3_2r41h")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b121j"]
+atlas = ExtResource("3_2r41h")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t1rx8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppgk2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2r41h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_klq6b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b121j")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8frs"]
+size = Vector2(104, 1471.375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mx8sn"]
+size = Vector2(2357, 53)
+
+[node name="level" type="Node2D" unique_id=1698450406]
+script = ExtResource("1_mx8sn")
+
+[node name="BG" type="Sprite2D" parent="." unique_id=1966186744]
+position = Vector2(959.75, 601.75006)
+scale = Vector2(7.658203, 4.8378906)
+texture = ExtResource("1_w8frs")
+
+[node name="stars" type="Node2D" parent="." unique_id=2053271023]
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="stars" unique_id=391343737]
+sprite_frames = SubResource("SpriteFrames_t1rx8")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D23" type="AnimatedSprite2D" parent="stars" unique_id=327053165]
+sprite_frames = SubResource("SpriteFrames_t1rx8")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D21" type="AnimatedSprite2D" parent="stars" unique_id=1144647805]
+sprite_frames = SubResource("SpriteFrames_t1rx8")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D19" type="AnimatedSprite2D" parent="stars" unique_id=290164020]
+sprite_frames = SubResource("SpriteFrames_t1rx8")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D18" type="AnimatedSprite2D" parent="stars" unique_id=2094856798]
+sprite_frames = SubResource("SpriteFrames_t1rx8")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D17" type="AnimatedSprite2D" parent="stars" unique_id=503521200]
+sprite_frames = SubResource("SpriteFrames_t1rx8")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D15" type="AnimatedSprite2D" parent="stars" unique_id=1994704190]
+sprite_frames = SubResource("SpriteFrames_t1rx8")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D13" type="AnimatedSprite2D" parent="stars" unique_id=190859142]
+sprite_frames = SubResource("SpriteFrames_t1rx8")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D14" type="AnimatedSprite2D" parent="stars" unique_id=1085410300]
+sprite_frames = SubResource("SpriteFrames_t1rx8")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D10" type="AnimatedSprite2D" parent="stars" unique_id=521858528]
+sprite_frames = SubResource("SpriteFrames_t1rx8")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="stars" unique_id=1589028078]
+sprite_frames = SubResource("SpriteFrames_t1rx8")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="stars" unique_id=345391920]
+sprite_frames = SubResource("SpriteFrames_t1rx8")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="stars" unique_id=1746234726]
+sprite_frames = SubResource("SpriteFrames_t1rx8")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="stars" unique_id=624337157]
+sprite_frames = SubResource("SpriteFrames_t1rx8")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="stars" unique_id=730762747]
+sprite_frames = SubResource("SpriteFrames_t1rx8")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D26" type="AnimatedSprite2D" parent="stars" unique_id=949627142]
+sprite_frames = SubResource("SpriteFrames_t1rx8")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D20" type="AnimatedSprite2D" parent="stars" unique_id=1417317613]
+sprite_frames = SubResource("SpriteFrames_t1rx8")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="ship1" parent="." unique_id=1820717081 instance=ExtResource("2_mx8sn")]
+position = Vector2(946, 1114)
+
+[node name="borders" type="Node2D" parent="." unique_id=1398853366]
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="borders" unique_id=1243920848]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="borders/StaticBody2D" unique_id=1929060209]
+position = Vector2(1973, 607.625)
+shape = SubResource("RectangleShape2D_w8frs")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="borders" unique_id=204113346]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="borders/StaticBody2D2" unique_id=411097442]
+position = Vector2(743.5, -27.5)
+shape = SubResource("RectangleShape2D_mx8sn")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="borders" unique_id=1931860015]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="borders/StaticBody2D4" unique_id=1639974363]
+position = Vector2(965, 1246)
+shape = SubResource("RectangleShape2D_mx8sn")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="borders" unique_id=176473207]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="borders/StaticBody2D3" unique_id=1500013322]
+position = Vector2(-65, 487.3125)
+shape = SubResource("RectangleShape2D_w8frs")
+
+[node name="meteorTimer" type="Timer" parent="." unique_id=1554215093]
+wait_time = 0.125
+autostart = true
+
+[node name="meteor1" parent="." unique_id=2058638946 instance=ExtResource("3_ppgk2")]
+position = Vector2(-65, -26)
+metadata/_edit_lock_ = true
+
+[node name="Laser" type="Node2D" parent="." unique_id=1044845212]
+position = Vector2(538, 744)
+metadata/_edit_lock_ = true
+
+[node name="UI" parent="." unique_id=485929312 instance=ExtResource("6_2r41h")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1627270367]
+stream = ExtResource("7_klq6b")
+autoplay = true
+parameters/looping = true
+
+[connection signal="laser" from="ship1" to="." method="_on_ship_1_laser"]
+[connection signal="timeout" from="meteorTimer" to="." method="_on_timer_timeout"]

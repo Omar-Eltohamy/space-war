@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://djgd3ws0mms7f"]
+
+[ext_resource type="Script" uid="uid://ttoxi2wjlx84" path="res://script/meteor.gd" id="1_a14vc"]
+[ext_resource type="AudioStream" uid="uid://bx7khqjehdwd8" path="res://sound/hit_sound.mp3" id="2_a14vc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m2gja"]
+radius = 22.0
+height = 44.0
+
+[node name="meteor1" type="Area2D" unique_id=2058638946]
+collision_layer = 2
+collision_mask = 9
+script = ExtResource("1_a14vc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=335100216]
+light_mask = 2
+visibility_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=454289925]
+visibility_layer = 2
+position = Vector2(1, 2)
+shape = SubResource("CapsuleShape2D_m2gja")
+
+[node name="hit_sound" type="AudioStreamPlayer2D" parent="." unique_id=2087754556]
+stream = ExtResource("2_a14vc")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

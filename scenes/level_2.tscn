@@ -1,0 +1,209 @@
+[gd_scene format=3 uid="uid://cbjwiwkrlh5ct"]
+
+[ext_resource type="Script" uid="uid://bksyj0qn38eoh" path="res://script/level_2.gd" id="1_ne2mo"]
+[ext_resource type="Texture2D" uid="uid://bd7mm3kl8wqa5" path="res://images/space.png" id="1_y0kc7"]
+[ext_resource type="Texture2D" uid="uid://ja166fqmtdv4" path="res://images/S001_nyknck.png" id="2_ne2mo"]
+[ext_resource type="PackedScene" uid="uid://jkh61t5ckm03" path="res://scenes/ship_1.tscn" id="3_6cvei"]
+[ext_resource type="PackedScene" uid="uid://15didh42jfil" path="res://scenes/player_2.tscn" id="4_que50"]
+[ext_resource type="PackedScene" uid="uid://djgd3ws0mms7f" path="res://scenes/meteor_1.tscn" id="5_hey2k"]
+[ext_resource type="PackedScene" uid="uid://rdj6bl4ixsib" path="res://scenes/ui.tscn" id="6_172wr"]
+[ext_resource type="AudioStream" uid="uid://c4hs0th0bktim" path="res://sound/game_sound.mp3" id="7_g2hoc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppgk2"]
+atlas = ExtResource("2_ne2mo")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2r41h"]
+atlas = ExtResource("2_ne2mo")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klq6b"]
+atlas = ExtResource("2_ne2mo")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b121j"]
+atlas = ExtResource("2_ne2mo")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fldb1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppgk2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2r41h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_klq6b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b121j")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_guvtl"]
+size = Vector2(104, 1222.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_igmy8"]
+size = Vector2(1949, 53)
+
+[node name="level2" type="Node2D" unique_id=1857443952]
+script = ExtResource("1_ne2mo")
+
+[node name="BG" type="Sprite2D" parent="." unique_id=376914826]
+position = Vector2(960.75, 599.25)
+scale = Vector2(7.6660156, 4.8183594)
+texture = ExtResource("1_y0kc7")
+
+[node name="stars" type="Node2D" parent="." unique_id=2038381882]
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="stars" unique_id=169086631]
+sprite_frames = SubResource("SpriteFrames_fldb1")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D23" type="AnimatedSprite2D" parent="stars" unique_id=556167110]
+sprite_frames = SubResource("SpriteFrames_fldb1")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D21" type="AnimatedSprite2D" parent="stars" unique_id=159150127]
+sprite_frames = SubResource("SpriteFrames_fldb1")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D19" type="AnimatedSprite2D" parent="stars" unique_id=956332733]
+sprite_frames = SubResource("SpriteFrames_fldb1")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D18" type="AnimatedSprite2D" parent="stars" unique_id=318470822]
+sprite_frames = SubResource("SpriteFrames_fldb1")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D17" type="AnimatedSprite2D" parent="stars" unique_id=375698763]
+sprite_frames = SubResource("SpriteFrames_fldb1")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D15" type="AnimatedSprite2D" parent="stars" unique_id=1302434094]
+sprite_frames = SubResource("SpriteFrames_fldb1")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D13" type="AnimatedSprite2D" parent="stars" unique_id=1523859864]
+sprite_frames = SubResource("SpriteFrames_fldb1")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D14" type="AnimatedSprite2D" parent="stars" unique_id=1441948035]
+sprite_frames = SubResource("SpriteFrames_fldb1")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D10" type="AnimatedSprite2D" parent="stars" unique_id=1981958806]
+sprite_frames = SubResource("SpriteFrames_fldb1")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="stars" unique_id=93937629]
+sprite_frames = SubResource("SpriteFrames_fldb1")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="stars" unique_id=426066387]
+sprite_frames = SubResource("SpriteFrames_fldb1")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="stars" unique_id=1338917645]
+sprite_frames = SubResource("SpriteFrames_fldb1")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="stars" unique_id=183728183]
+sprite_frames = SubResource("SpriteFrames_fldb1")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="stars" unique_id=1648242908]
+sprite_frames = SubResource("SpriteFrames_fldb1")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D26" type="AnimatedSprite2D" parent="stars" unique_id=731367812]
+sprite_frames = SubResource("SpriteFrames_fldb1")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D20" type="AnimatedSprite2D" parent="stars" unique_id=799474133]
+position = Vector2(3, 0)
+sprite_frames = SubResource("SpriteFrames_fldb1")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="ship1" parent="." unique_id=1820717081 instance=ExtResource("3_6cvei")]
+position = Vector2(287, 1122)
+
+[node name="player2" parent="." unique_id=358289704 instance=ExtResource("4_que50")]
+position = Vector2(1715, 1117)
+
+[node name="borders" type="Node2D" parent="." unique_id=1224883099]
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="borders" unique_id=317965578]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="borders/StaticBody2D" unique_id=1506932043]
+position = Vector2(1991, 605.625)
+shape = SubResource("RectangleShape2D_guvtl")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="borders" unique_id=901262496]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="borders/StaticBody2D2" unique_id=1457403900]
+position = Vector2(987, -27)
+shape = SubResource("RectangleShape2D_igmy8")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="borders" unique_id=1789716092]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="borders/StaticBody2D4" unique_id=1729878538]
+position = Vector2(977.5, 1244)
+shape = SubResource("RectangleShape2D_igmy8")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="borders" unique_id=166409120]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="borders/StaticBody2D3" unique_id=1403448091]
+position = Vector2(-48, 602)
+shape = SubResource("RectangleShape2D_guvtl")
+
+[node name="meteorTimer" type="Timer" parent="." unique_id=514987139]
+wait_time = 0.125
+autostart = true
+
+[node name="meteor1" parent="." unique_id=2058638946 instance=ExtResource("5_hey2k")]
+position = Vector2(-65, -26)
+metadata/_edit_lock_ = true
+
+[node name="Laser" type="Node2D" parent="." unique_id=1534710807]
+position = Vector2(538, 744)
+metadata/_edit_lock_ = true
+
+[node name="UI" parent="." unique_id=485929312 instance=ExtResource("6_172wr")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1988257035]
+stream = ExtResource("7_g2hoc")
+autoplay = true
+parameters/looping = true
+
+[connection signal="laser" from="ship1" to="." method="_on_ship_1_laser"]
+[connection signal="laser" from="player2" to="." method="_on_player_2_laser"]
+[connection signal="timeout" from="meteorTimer" to="." method="_on_meteor_timer_timeout"]
